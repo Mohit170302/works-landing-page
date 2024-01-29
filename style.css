@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Freight big pro";
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    background-color: black;
+    
+}
+
+.loader{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 99;
+   
+
+}
+.loader h1{
+    font-size: 6.5vw;
+    line-height: 5vw;
+    font-weight: 100;
+    letter-spacing: -3px;
+    position: relative;
+    z-index: 9;
+    
+}
+.loader video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index:6;
+
+}
+.yellow1{
+    height: 100%;
+    width: 100%;
+    background-color: #f5e41b;
+    position: absolute;
+    z-index: 8;
+}
+.yellow2{
+    height: 100%;
+    width: 100%;
+    background-color: #f5e41b;
+    position: absolute;
+    z-index: 7;
+}
+.nav{
+    position: absolute;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav svg path{
+    fill: black;
+}
+.nav-con{
+    height: 30px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav-con a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size:1.4vw;
+    font-weight: 100;
+
+}
+
+
+.pg1{
+    height: 100vh;
+    width: 100%;
+    background-color: #f5e41b ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pg1 h1{
+    font-size: 6.5vw;
+    line-height: 5vw;
+    font-weight: 100;
+    letter-spacing: -3px;
+    
+}
+.pg2{
+    height: 100vh;
+    width: 100%;
+    background-color: black ;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.elem{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+   
+}
+.elem h2{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+    line-height:5.5vw;
+    
+    font-style: normal;
+
+}
+.elem .moving{
+    background-color:#f5e41b;
+    width: 100%;
+    white-space: nowrap;
+    padding: 4px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-45%) scaleY(0);
+    transition: all ease 0.3s;  
+    overflow: hidden;
+   
+
+}
+
+.elem .moving .moving-in{
+
+display: inline-block;
+white-space: nowrap;
+animation-name: moving;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+.elem .moving .moving-in h5{
+    color: black;
+    display: inline-block;
+    font-size: 14px;
+    transition: all ease 0.3s;
+    opacity: 0;
+    transition-delay: 0s;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    
+}
+.elem .blur{
+    position: absolute;
+    background:linear-gradient();
+    height: 100%;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 8;
+    background: linear-gradient(to right,#f5e41b,#f5e41b,#f5e41b);
+    box-shadow: 10px 0px 20px 20px #f5e41b,-10px 0px 20px 20px #f5e41b;
+
+
+}
+.elem .blur1{
+    position: absolute;
+    background:linear-gradient();
+    height: 100%;
+    width: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 8;
+    background: linear-gradient(to right,#f5e41b,#f5e41b,#f5e41b);
+    box-shadow: 10px 0px 20px 20px #f5e41b,-10px 0px 20px 20px #f5e41b;
+
+
+}
+@keyframes moving {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.elem:hover .moving{
+    transform: translate(0,-45%) scaleY(1);
+
+}
+.elem:hover .moving h5{
+    opacity: 1;
+}
+.elem:hover h2{
+    font-style: italic;
+}
+.pg3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: white ;
+}
+.img-cont{
+    padding:25px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    
+
+}
+
+.img-div{
+    width: 30vw;
+    position: relative;
+    overflow: hidden;
+   margin: 10px; 
+   
+}
+.img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    
+    
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.084);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    z-index: 9;
+}
+.overlay p{
+    color: white;
+    padding: 20px;
+    font-size: 3.5vw;
+    text-align: center;
+    line-height: 3vw;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+     opacity: 0;
+}
+.img-div:hover .overlay{
+    background-color: black;
+
+}
+.img-div:hover .overlay p{
+    opacity: 1;
+}
+.img-div:hover img{
+    scale:1.1;
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    
+}
+.footer h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 1;
+    font-size: 1.4vw;
+    color: rgb(63, 63, 63);
+    margin-bottom: 40px;
+      
+}
+
+.footer .foot{
+    height: 50%;
+    width: 100%;
+   background-color: black;
+}
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.foot h2{
+    color: white;
+    margin:20px 20px;
+}
+.foot .foot-con{
+    width: 40%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.phone{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.insta{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+
+
